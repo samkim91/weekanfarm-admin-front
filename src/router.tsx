@@ -1,8 +1,8 @@
 import {createBrowserRouter} from "react-router-dom";
 import MiniDrawer from "./components/Drawer";
-import FarmCreatePage from "./pages/farms/create";
+import FarmCreateContainer from "./containers/farms/create";
 import * as React from "react";
-import Themes from "./pages/themes";
+import Themes from "./containers/themes";
 import {Agriculture, Category} from "@mui/icons-material";
 
 export const router = createBrowserRouter([
@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/farms',
-                element: <FarmCreatePage/>
+                element: <FarmCreateContainer/>
             },
             {
                 path: '/themes',
