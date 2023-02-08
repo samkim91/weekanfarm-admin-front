@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import FarmCreate from "../../components/farms/create";
-import {IFarmInfoProps} from "../../adapters/farms/create";
+import FarmCreate from "../../components/farms/farm_create";
+import {IFarmInfoProps} from "../../adapters/farms/farm_info_props";
 
 function FarmCreateContainer() {
     const [farmInfo, setFarmInfo] = useState<IFarmInfoProps>({
@@ -14,12 +14,15 @@ function FarmCreateContainer() {
         ownerNotes: "",
         hashTags: "",
         conveniences: "",
-        updateTextProps: (key: string, value: string) => {
-        },
+        refundPolicy: "",
+        isActive: true,
+        isReservationCancelable: false,
+        updateValue: (key: string, value: string | boolean) => {
+        }
     })
 
-    const onChange = (key: string, value: string) => {
-        console.log("onChange : " + key + "/" + value);
+    const onChangeValue = (key: string, value: string | boolean) => {
+        console.log("onChangeValue : " + key + "/" + value);
 
         setFarmInfo({
             ...farmInfo,
@@ -28,7 +31,7 @@ function FarmCreateContainer() {
     }
 
     return (
-        <FarmCreate {...farmInfo} updateTextProps={onChange}/>
+        <FarmCreate {...farmInfo} updateValue={onChangeValue}/>
     );
 }
 

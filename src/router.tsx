@@ -1,6 +1,6 @@
 import {createBrowserRouter} from "react-router-dom";
 import MiniDrawer from "./components/Drawer";
-import FarmCreateContainer from "./containers/farms/create";
+import FarmCreateContainer from "./containers/farms/farm_create_container";
 import * as React from "react";
 import Themes from "./containers/themes";
 import {Agriculture, Category} from "@mui/icons-material";
