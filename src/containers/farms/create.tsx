@@ -14,11 +14,13 @@ function FarmCreateContainer() {
         ownerNotes: "",
         hashTags: "",
         conveniences: "",
-        updateTextProps: (key: string, value: string) => {
-        },
+        adminMemo: "",
+        refundPolicy: "",
+        updateTextProps: (key: string, value: string | boolean) => {
+        }
     })
 
-    const onChange = (key: string, value: string) => {
+    const onChange = (key: string, value: string | boolean) => {
         console.log("onChange : " + key + "/" + value);
 
         setFarmInfo({

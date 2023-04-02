@@ -9,5 +9,7 @@ export type IFarmInfoProps = {
     ownerNotes: string;
     hashTags: string;
     conveniences: string;
-    updateTextProps: (key: string, value: string) => void;
+    refundPolicy: string;
+    adminMemo: string;
+    updateTextProps: (key: string, value: string | boolean) => void;
 }
